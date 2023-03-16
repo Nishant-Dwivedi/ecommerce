@@ -18,10 +18,11 @@ function ContextProvider(props) {
       .then((res) => res.json())
       .then((data) => {
         const imagesArray = data.results.map((result) => ({
-          url: result.urls.regular,
+          // added query parameters to crop image and resize
+          url: result.urls.raw,
           id: result.id,
           isFavourited: false,
-          price: 3999,
+          price: Math.floor(Math.random() * (5999 - 2999) + 2999),
         }));
         setImages(imagesArray);
       });

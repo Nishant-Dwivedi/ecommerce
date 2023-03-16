@@ -7,7 +7,7 @@ import Cart from "./pages/cart";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App py-5 px-7">
       <Header />
       <Routes>
         <Route path="/" element={<Products />} />

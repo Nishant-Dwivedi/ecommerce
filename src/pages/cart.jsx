@@ -14,27 +14,27 @@ export default function Cart() {
   }
   
   return (
-    <div id="cart" className="flex flex-col">
+    <div id="cart" className="flex flex-col gap-y-2">
       {cartItems.length ? (
-        <h1 className="text-4xl py-5 font-semibold text-center">Checkout</h1>
+        <h1 className="text-3xl py-5 font-semibold text-center">Checkout</h1>
       ) : (
-        <h1 className="text-4xl py-5 font-semibold text-center">Cart Empty</h1>
+        <h1 className="text-4xl py-5 font-semibold text-center">Cart empty</h1>
       )}
-      <div className="flex flex-col gap-y-5">
+      <div className="flex flex-col gap-y-7 md:gap-y-5 mb-4">
         {
           cartItems.map((item) => (
             <CartItem key={item.id} url={item.url} price={item.price} removeFromCart={removeFromCart} id={item.id}/>
           ))
         }
       </div>
-      {cartItems.length ? <div className="flex justify-between items-center py-3">
+      {cartItems.length ? <div className="flex justify-center gap-x-24 md:justify-between items-center py-2">
         <span className="text-xl font-semibold">Subtotal</span>
         <span className="text-xl font-semibold">
           {`${totalCartValue()}/-`}
         </span>
       </div> : null}
      {cartItems.length ?  <button className="rounded-lg bg-indigo-500 self-center text-white px-7 py-3" onClick={placeOrder}>{buttonText}</button> : null}
-      <Link className="self-center py-3" to="/">{cartItems.length ? "Or " : ""} <span className="text-indigo-700 font-semibold">continue shopping</span></Link>
+      <Link className="self-center py-3" to="/">{cartItems.length ? "or " : ""} <span className="text-indigo-700 font-semibold">Continue shopping</span></Link>
       
     </div>
   );

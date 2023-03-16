@@ -6,11 +6,11 @@ import logo from "../assets/sneakers.png";
 export default function Header() {
   const { isCartFilled } = useContext(someContext);
   return (
-    <header>
+    <header className="flex justify-between items-center py-3 px-3 rounded-xl bg-gray-300">
       <Link to="/">
-        <div className="logo-container">
-          <img src={logo} />
-          <h2>Shoekart</h2>
+        <div className="flex gap-x-1 items-center">
+          <img src={logo} className="w-12 h-12 md:w-max md:h-max" />
+          <h2 className="text-4xl md:text-5xl font-semibold">Shoekart</h2>
         </div>
       </Link>
       <Link to="/cart">
