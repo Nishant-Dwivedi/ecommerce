@@ -10,8 +10,10 @@ function ContextProvider(props) {
   useEffect(() => {
     // search query
     const query = "nike shoes";
-    // id = rdpS1l1cPwSaGFNzVAatGbP8d51Hcc2zslAu00IdH_Y
-    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=24&client_id=rdpS1l1cPwSaGFNzVAatGbP8d51Hcc2zslAu00IdH_Y`;
+    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=24&client_id=${
+      import.meta.env.VITE_ACCESS_KEY
+    }
+      `;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
