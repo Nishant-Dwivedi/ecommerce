@@ -11,7 +11,7 @@ function ContextProvider(props) {
     // search query
     const query = "nike shoes";
     const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=24&client_id=${
-      import.meta.env.VITE_ACCESS_KE}`;
+      import.meta.env.VITE_ACCESS_KEY}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
