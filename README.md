@@ -4,7 +4,7 @@ This is a simple E-Commerce website made in ReactJS. It has wishlisting and chec
 
 ### Links
 
-- Live Site URL: [Live Preview](https://comforting-cassata-4025ef.netlify.app/)
+- Live Site URL: [Live Preview](https://tubular-basbousa-f9f17d.netlify.app/)
 
 ### Built Using
 
