@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<div className="text-center text-4xl font-bold py-4">404 Not Found</div>} />
       </Routes>
       <Footer />
     </div>

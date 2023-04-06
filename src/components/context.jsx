@@ -18,7 +18,6 @@ function ContextProvider(props) {
       .then((res) => res.json())
       .then((data) => {
         const imagesArray = data.results.map((result) => ({
-          // added query parameters to crop image and resize
           url: result.urls.raw,
           id: result.id,
           isFavourited: false,
